@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Video Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="logo">VideoGallery</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search videos...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <!-- Drawer Menu -->
+        <aside class="drawer" id="drawer">
+            <nav class="drawer-nav">
+                <div class="drawer-header">
+                    <h2>Menu</h2>
+                    <button class="close-drawer" id="closeDrawer">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-film"></i> Videos</a></li>
+                    <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+                    <li><a href="#"><i class="fas fa-history"></i> History</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+                </ul>
+                <div class="drawer-footer">
+                    <p>© 2023 VideoGallery</p>
+                </div>
+            </nav>
+        </aside>
+        <div class="overlay" id="overlay"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="video-gallery">
+                <h2 class="section-title">Featured Videos</h2>
+                <div class="video-grid">
+                    <!-- Video Cards -->
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://via.placeholder.com/320x180" alt="Video thumbnail">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">5:30</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Beautiful Nature Scenes</h3>
+                            <p class="video-description">Relaxing nature footage from around the world</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 1.2M views</span>
+                                <span><i class="fas fa-calendar-alt"></i> 2 weeks ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://via.placeholder.com/320x180" alt="Video thumbnail">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">8:15</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">City Time Lapse</h3>
+                            <p class="video-description">Amazing time lapse of a busy city</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 850K views</span>
+                                <span><i class="fas fa-calendar-alt"></i> 1 month ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://via.placeholder.com/320x180" alt="Video thumbnail">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">12:40</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Cooking Tutorial</h3>
+                            <p class="video-description">Learn to make delicious pasta from scratch</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 2.3M views</span>
+                                <span><i class="fas fa-calendar-alt"></i> 3 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://via.placeholder.com/320x180" alt="Video thumbnail">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">4:22</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Workout Routine</h3>
+                            <p class="video-description">15 minute full body workout at home</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 3.1M views</span>
+                                <span><i class="fas fa-calendar-alt"></i> 1 week ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://via.placeholder.com/320x180" alt="Video thumbnail">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">7:18</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Travel Vlog: Japan</h3>
+                            <p class="video-description">Exploring Tokyo's hidden gems</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 1.7M views</span>
+                                <span><i class="fas fa-calendar-alt"></i> 2 months ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://via.placeholder.com/320x180" alt="Video thumbnail">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">10:05</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">DIY Home Decor</h3>
+                            <p class="video-description">Transform your space with these easy ideas</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 950K views</span>
+                                <span><i class="fas fa-calendar-alt"></i> 3 weeks ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
