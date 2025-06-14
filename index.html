@@ -3,185 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GuitarGuide</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Smooth Video Gallery</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="assets/guitar-icon.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Drawer -->
-    <div class="drawer-overlay"></div>
-    <nav class="drawer">
-        <div class="drawer-header">
-            <img src="assets/logo.png" alt="GuitarGuide Logo" class="logo">
-            <h2>GuitarGuide</h2>
-        </div>
-        <ul class="drawer-menu">
-            <li class="active"><i class="fas fa-home"></i> Home</li>
-            <li><i class="fas fa-video"></i> Video Lessons</li>
-            <li><i class="fas fa-music"></i> Chord Library</li>
-            <li><i class="fas fa-book"></i> Songbook</li>
-            <li><i class="fas fa-sliders-h"></i> Tuner</li>
-            <li><i class="fas fa-heart"></i> Favorites</li>
-            <li><i class="fas fa-cog"></i> Settings</li>
-        </ul>
-        <div class="drawer-footer">
-            <button class="ios-button premium-btn">
-                <i class="fas fa-crown"></i> Go Premium
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
             </button>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Header with Hamburger -->
-        <header class="ios-header">
-            <button class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <h1>GuitarGuide</h1>
-            <div class="header-icons">
-                <i class="fas fa-search"></i>
-                <i class="fas fa-bell"></i>
+            <h1 class="logo">VideoGallery</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search videos...">
+                <button><i class="fas fa-search"></i></button>
             </div>
         </header>
-        
-        <!-- Featured Section -->
-        <section class="featured-section">
-            <h2 class="section-title">Featured Lessons</h2>
-            <div class="featured-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/placeholder.jpg')">
-                <div class="featured-content">
-                    <span class="badge">NEW</span>
-                    <h3>Beginner's Guide to Guitar</h3>
-                    <p>Start your guitar journey with these essential lessons</p>
-                    <button class="ios-button">
-                        <i class="fas fa-play"></i> Start Learning
+
+        <!-- Drawer Menu -->
+        <aside class="drawer" id="drawer">
+            <nav class="drawer-nav">
+                <div class="drawer-header">
+                    <h2>Menu</h2>
+                    <button class="close-drawer" id="closeDrawer">
+                        <i class="fas fa-times"></i>
                     </button>
                 </div>
-            </div>
-        </section>
-        
-        <!-- Video Grid -->
-        <section class="video-section">
-            <h2 class="section-title">Popular Lessons</h2>
-            <div class="video-grid">
-                <div class="video-card">
-                    <div class="video-thumbnail-container">
-                        <video class="video-thumbnail" poster="assets/placeholder.jpg">
-                            <source src="videos/beginner-chords.mp4" type="video/mp4">
-                        </video>
-                        <div class="duration-badge">5:32</div>
-                    </div>
-                    <div class="video-info">
-                        <h3>Essential Chords for Beginners</h3>
-                        <div class="video-meta">
-                            <span><i class="fas fa-eye"></i> 12.4K</span>
-                            <span><i class="fas fa-heart"></i> 843</span>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-film"></i> Videos</a></li>
+                    <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+                    <li><a href="#"><i class="fas fa-history"></i> History</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+                </ul>
+                <div class="drawer-footer">
+                    <p>© 2023 VideoGallery</p>
+                </div>
+            </nav>
+        </aside>
+        <div class="overlay" id="overlay"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="video-gallery">
+                <h2 class="section-title">Featured Videos</h2>
+                <div class="video-grid">
+                    <!-- Video Cards -->
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://via.placeholder.com/320x180" alt="Video thumbnail">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">5:30</span>
                         </div>
-                        <div class="video-actions">
-                            <button class="icon-button"><i class="fas fa-bookmark"></i></button>
-                            <button class="icon-button"><i class="fas fa-share-alt"></i></button>
-                            <button class="play-button ios-button small">
-                                <i class="fas fa-play"></i>
-                            </button>
+                        <div class="video-info">
+                            <h3 class="video-title">Beautiful Nature Scenes</h3>
+                            <p class="video-description">Relaxing nature footage from around the world</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 1.2M views</span>
+                                <span><i class="fas fa-calendar-alt"></i> 2 weeks ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://via.placeholder.com/320x180" alt="Video thumbnail">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">8:15</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">City Time Lapse</h3>
+                            <p class="video-description">Amazing time lapse of a busy city</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 850K views</span>
+                                <span><i class="fas fa-calendar-alt"></i> 1 month ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://via.placeholder.com/320x180" alt="Video thumbnail">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">12:40</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Cooking Tutorial</h3>
+                            <p class="video-description">Learn to make delicious pasta from scratch</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 2.3M views</span>
+                                <span><i class="fas fa-calendar-alt"></i> 3 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://via.placeholder.com/320x180" alt="Video thumbnail">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">4:22</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Workout Routine</h3>
+                            <p class="video-description">15 minute full body workout at home</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 3.1M views</span>
+                                <span><i class="fas fa-calendar-alt"></i> 1 week ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://via.placeholder.com/320x180" alt="Video thumbnail">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">7:18</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Travel Vlog: Japan</h3>
+                            <p class="video-description">Exploring Tokyo's hidden gems</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 1.7M views</span>
+                                <span><i class="fas fa-calendar-alt"></i> 2 months ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://via.placeholder.com/320x180" alt="Video thumbnail">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">10:05</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">DIY Home Decor</h3>
+                            <p class="video-description">Transform your space with these easy ideas</p>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 950K views</span>
+                                <span><i class="fas fa-calendar-alt"></i> 3 weeks ago</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="video-card">
-                    <div class="video-thumbnail-container">
-                        <video class="video-thumbnail" poster="assets/placeholder.jpg">
-                            <source src="videos/fingerstyle-technique.mp4" type="video/mp4">
-                        </video>
-                        <div class="duration-badge">8:15</div>
-                    </div>
-                    <div class="video-info">
-                        <h3>Fingerstyle Basics</h3>
-                        <div class="video-meta">
-                            <span><i class="fas fa-eye"></i> 8.7K</span>
-                            <span><i class="fas fa-heart"></i> 562</span>
-                        </div>
-                        <div class="video-actions">
-                            <button class="icon-button"><i class="fas fa-bookmark"></i></button>
-                            <button class="icon-button"><i class="fas fa-share-alt"></i></button>
-                            <button class="play-button ios-button small">
-                                <i class="fas fa-play"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="video-card">
-                    <div class="video-thumbnail-container">
-                        <video class="video-thumbnail" poster="assets/placeholder.jpg">
-                            <source src="videos/song-tutorial.mp4" type="video/mp4">
-                        </video>
-                        <div class="duration-badge">12:47</div>
-                    </div>
-                    <div class="video-info">
-                        <h3>Wonderwall Tutorial</h3>
-                        <div class="video-meta">
-                            <span><i class="fas fa-eye"></i> 24.1K</span>
-                            <span><i class="fas fa-heart"></i> 1.2K</span>
-                        </div>
-                        <div class="video-actions">
-                            <button class="icon-button"><i class="fas fa-bookmark"></i></button>
-                            <button class="icon-button"><i class="fas fa-share-alt"></i></button>
-                            <button class="play-button ios-button small">
-                                <i class="fas fa-play"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Chord Practice Section -->
-        <section class="chord-section">
-            <h2 class="section-title">Chord Practice</h2>
-            <div class="chord-grid">
-                <div class="chord-card" data-sound="sounds/chord-c.mp3">
-                    <div class="chord-diagram">C</div>
-                    <h3>C Major</h3>
-                </div>
-                <div class="chord-card" data-sound="sounds/chord-g.mp3">
-                    <div class="chord-diagram">G</div>
-                    <h3>G Major</h3>
-                </div>
-                <div class="chord-card" data-sound="sounds/chord-d.mp3">
-                    <div class="chord-diagram">D</div>
-                    <h3>D Major</h3>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
     </div>
-    
-    <!-- Video Modal -->
-    <div class="video-modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <video controls autoplay>
-                <source src="" type="video/mp4">
-            </video>
-            <div class="video-details">
-                <h3 class="video-title"></h3>
-                <div class="video-stats">
-                    <span><i class="fas fa-eye"></i> <span class="views"></span></span>
-                    <span><i class="fas fa-heart"></i> <span class="likes"></span></span>
-                </div>
-                <p class="video-description"></p>
-                <button class="ios-button favorite-btn">
-                    <i class="fas fa-heart"></i> Add to Favorites
-                </button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Audio Element for Chords -->
-    <audio id="chord-audio"></audio>
-    
-    <script src="scripts.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
